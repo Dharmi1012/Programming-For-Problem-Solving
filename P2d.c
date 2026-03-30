@@ -20,7 +20,7 @@ int main()
            printf("\n Enter string ");
            scanf("%s", str);
            length=0;
-           while(str != '\0')
+           while(str[length]!= '\0')
            {
                length++;
            }
@@ -30,8 +30,8 @@ int main()
        {
             case 1:
             printf("\n Original string: %s", str);
-            printf("\n reverse");
-            for(int i=str[length]-1; i>=0; i--)
+            printf("\n reverse: \t");
+            for(int i=length-1; i>=0; i--)
             {
                 printf("%c", str[i]);
             }
@@ -46,9 +46,12 @@ int main()
             {
                 if(str[i]>='A' && str[i]<='Z')
                 {
-                   printf("%c", str[i]-32);
+                   printf("%c", str[i]+32);
                 }
-                printf("%c", str[i]);
+                else
+                {
+                   printf("%c", str[i]);
+                }
             }
             break;
 
@@ -62,7 +65,10 @@ int main()
                 {
                    printf("%c", str[i]-32);
                 }
+                else
+                {
                 printf("%c", str[i]);
+                }
             }
             break;
 
